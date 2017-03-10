@@ -96,7 +96,7 @@ Here we assume you have the hard-coded Windows path replaced with GRUB.
 
 If you can't run GRUB, you can try reinstalling it (see the next section).
 
-# Reinstall GRUB
+# Fix a broken GRUB
 
 Run as root:
 
