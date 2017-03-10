@@ -140,7 +140,10 @@ reboot
 You need to disable `Fast Startup`.
 
 ```
-Start > Settings > System > Power & Sleep > Additional Power settings > "Choose what the power buttons do" > "Change settings that are currently unavailable" > Untick "Turn on fast startup"
+Start > Settings > System > Power & Sleep > Additional Power settings >
+    "Choose what the power buttons do" >
+    "Change settings that are currently unavailable" >
+    Untick "Turn on fast startup"
 ```
 
 # Other issues
