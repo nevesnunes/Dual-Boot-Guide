@@ -126,9 +126,10 @@ efibootmgr -c --disk /dev/sda --part Y
 ```
 Where `Y` is your EFI partition's number.
 
-Finally, type Ctrl+D to exit chroot, unmount everything and reboot:
+Finally, exit the chroot, unmount everything and reboot:
 
 ```
+exit
 for i in /sys /proc /dev/pts /dev; do umount "/mnt$i"; done
 umount /mnt/boot/efi
 umount /mnt
