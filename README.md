@@ -202,7 +202,7 @@ Feel free to leave an issue or pull request if you want some other cases covered
 
 # References
 
-- https://www.gnu.org/software/grub/manual/grub/html_node/Command_002dline-and-menu-entry-commands.html
+- https://www.gnu.org/software/grub/manual/grub/grub.html
 - https://help.ubuntu.com/community/Grub2/Troubleshooting
 - https://superuser.com/questions/111152/whats-the-proper-way-to-prepare-chroot-to-recover-a-broken-linux-installation
 - https://wiki.archlinux.org/index.php/GRUB
