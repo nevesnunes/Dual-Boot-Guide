@@ -83,9 +83,12 @@ BIOS > Secure Boot > Select an UEFI file as trusted for executing
 
 # Maybe GRUB isn't working?
 
-Try to load it manually with a `Live CD` image. The procedure is called **chainloading**, since you will be running your installed GRUB from the image's GRUB:
+Try to load it manually with a `Live CD` image. The procedure is called [chainloading](https://www.gnu.org/software/grub/manual/grub/html_node/Chain_002dloading.html), since you will be running your installed GRUB from the image's GRUB:
 
 ```
+# Enumerate disks and partitions
+ls
+
 set root='(hdX,gptX)'
 chainloader /EFI/Microsoft/Boot/bootmgfw.efi
 boot
@@ -106,7 +109,10 @@ fdisk -l
 
 # Mount partitions
 modprobe efivars
+fdisk -l
+# Given type `Linux`, take device `sdaX`
 mount /dev/sdaX /mnt
+# Given type `EFI`, take device `sdaY`
 mount /dev/sdaY /mnt/boot/efi
 for i in /dev /dev/pts /proc /sys; do mount -B "$i" "/mnt$i"; done
 
