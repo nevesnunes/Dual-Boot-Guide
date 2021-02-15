@@ -72,6 +72,16 @@ Finally run `update-grub`. You should have the generated GRUB in `/boot`.
 
 In case the above changes are ignored, you can copy that menuentry to the GRUB config file that is present in the EFI partition. Since we moved them around, it should be something like `/EFI/Microsoft/Boot/grub.cfg`.
 
+### [Optional] Use another GRUB config
+
+Before changing menuentries, you can make a backup of `grub.cfg`.
+
+If there are issues with the current config, you can load your backup in GRUB command line:
+
+```
+configfile /grub/grub.cfg.backup
+```
+
 # GRUB doesn't appear as a boot entry
 
 You need to add it as a trusted bootloader.
