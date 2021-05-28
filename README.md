@@ -163,6 +163,19 @@ initrd /boot/initramfs-$KERNEL_RELEASE
 boot
 ```
 
+If under `grub rescue` (confirm if command `linux` is recognized, otherwise try `kernel`):
+
+```
+set prefix=(hd0,msdos3)/boot/grub
+set root=(hd0,msdos3)
+insmod normal
+normal
+insmod linux
+linux /boot/vmlinuz-$KERNEL_RELEASE root=/dev/sda3
+initrd /boot/initramfs-$KERNEL_RELEASE
+boot
+```
+
 Where `$KERNEL_RELEASE` can be obtained with `uname -r`.
 
 If your distro is using `blscfg` to generate menuentries, check:
